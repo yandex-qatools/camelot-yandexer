@@ -1,4 +1,4 @@
-package ru.yandex.qatools.camelot.yandexer;
+package ru.yandex.qatools.yandexer;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

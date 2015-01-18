@@ -1,4 +1,4 @@
-angular.module('ru.yandex.qatools.camelot.yandexer.Collector', ['camelotUtil'])
+angular.module('ru.yandex.qatools.yandexer.Collector', ['camelotUtil'])
     .controller('AppCtrl', ['$scope', '$http', 'subscribe', 'baseUrl', 'pluginId', function ($scope, $http, subscribe, baseUrl, pluginId) {
         'use strict';
         $scope.results = {};

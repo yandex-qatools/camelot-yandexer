@@ -8,11 +8,14 @@
             <param name="maxMessagesPerTask" value="10"/>
         </broker>
         <plugin id="fetcher">
-            <processor>ru.yandex.qatools.camelot.yandexer.Fetcher</processor>
-            <resource>ru.yandex.qatools.camelot.yandexer.Resource</resource>
+            <processor>ru.yandex.qatools.yandexer.Fetcher</processor>
+            <resource>ru.yandex.qatools.yandexer.Resource</resource>
         </plugin>
         <plugin id="collector" source="fetcher">
-            <aggregator>ru.yandex.qatools.camelot.yandexer.Collector</aggregator>
+            <aggregator>ru.yandex.qatools.yandexer.Collector</aggregator>
+        </plugin>
+        <plugin id="result-saver" source="collector">
+            <processor>ru.yandex.qatools.yandexer.ResultSaver</processor>
         </plugin>
     </source>
 </plugins-config>

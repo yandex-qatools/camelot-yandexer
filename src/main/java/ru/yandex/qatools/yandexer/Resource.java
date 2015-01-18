@@ -1,4 +1,4 @@
-package ru.yandex.qatools.camelot.yandexer;
+package ru.yandex.qatools.yandexer;
 
 import ru.yandex.qatools.camelot.api.EventProducer;
 import ru.yandex.qatools.camelot.api.annotations.Input;

@@ -1,8 +1,9 @@
-package ru.yandex.qatools.camelot.yandexer;
+package ru.yandex.qatools.yandexer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.yandex.qatools.camelot.api.ClientMessageSender;
+import ru.yandex.qatools.camelot.api.EventProducer;
 import ru.yandex.qatools.camelot.api.annotations.*;
 import ru.yandex.qatools.fsm.annotations.FSM;
 import ru.yandex.qatools.fsm.annotations.OnTransit;
@@ -22,13 +23,17 @@ public class Collector {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @ClientSender
-    ClientMessageSender client;
+    private ClientMessageSender client;
+
+    @Output
+    private EventProducer out;
 
     @OnTransit
     public void collect(State to, EventResultsCount event) {
         logger.info("Collect event with key {} and message {}", event.getKey(), event.getResultsCount());
         to.setKey(event.getKey());
         to.addText(event.getResultsCount());
+        out.produce(event);
     }
 
     @AggregationKey
