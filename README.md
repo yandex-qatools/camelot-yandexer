@@ -29,7 +29,6 @@ Yandexer
     ```
     mvn clean compile
     ```
-
 ### 4. Запустить проект. Для запуска приложения требуется:
     * PhantomJS >= 1.9.0
     * PostgeSQL 9
@@ -40,7 +39,6 @@ Yandexer
     export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
     mvn clean compile camelot-test:run
     ```
-
 ### 5. Открыть `http://localhost:8080/camelot` в браузере.
 ![](img/camelot-start-page.png)
 

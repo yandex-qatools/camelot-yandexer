@@ -11,4 +11,4 @@ target
 *.pydevproject
 
 #Camelot configuration
-camelot.properties
+yandexer.properties
