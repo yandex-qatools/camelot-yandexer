@@ -26,9 +26,9 @@
 
         <!--camelot config-->
         <jetty.port>8080</jetty.port>
-        <activemq.port>62618</activemq.port>
-        <activemq.brokers>tcp://localhost:61616</activemq.brokers>
+        <!--<activemq.brokers>tcp://localhost:61616</activemq.brokers>-->
         <camelot-test.runForked>false</camelot-test.runForked>
+        <use.embedded.activemq>false</use.embedded.activemq>
     </properties>
 
     <build>
@@ -40,9 +40,9 @@
                 <configuration>
                     <runForked>${camelot-test.runForked}</runForked>
                     <jettyPort>${jetty.port}</jettyPort>
-                    <activemqPort>${activemq.port}</activemqPort>
-                    <activemqBrokers>${activemq.brokers}</activemqBrokers>
-                    <useEmbeddedActivemq>${camelot-test.runForked}</useEmbeddedActivemq>
+                    <!--<activemqBrokers>${activemq.brokers}</activemqBrokers>-->
+                    <useEmbeddedActivemq>${use.embedded.activemq}</useEmbeddedActivemq>
+                    <additionalProperties>classpath*:yandexer.properties</additionalProperties>
                 </configuration>
             </plugin>
         </plugins>
