@@ -9,3 +9,6 @@ target
 *.classpath
 *.project
 *.pydevproject
+
+#Camelot configuration
+camelot.properties
