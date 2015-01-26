@@ -13,7 +13,7 @@ Yandexer
 
 ### 1. Склонировать проект
 ```
-git clone https://github.com/camelot-framework/camelot-yandexer.git
+git clone https://github.com/yandex-qatools/camelot-yandexer.git
 ```
 
 ### 2. Составить конфигурационный файл `yandexer.properties`:
